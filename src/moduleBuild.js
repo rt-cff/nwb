@@ -32,7 +32,7 @@ function runBabel(name, {copyFiles, outDir, src}, buildBabelConfig, userConfig, 
 
   debug('babel config: %s', deepToString(babelConfig))
 
-  let args = [src, '--out-dir', outDir, '--quiet']
+  let args = [src, '--out-dir', outDir, '--quiet', '--extensions', '.ts,.tsx']
   if (copyFiles) {
     args.push('--copy-files', '--no-copy-ignored')
   }
